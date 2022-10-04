@@ -37,11 +37,24 @@ app.get('/fileitems', async (req, res) => {
 
 app.post('/uploadfile', upload.single('file'), async (req, res) => {
 	await db.read();
+	const fileName = req.body.fileName;
+	let iconPathAndFileName = '';
+	if (fileName.endsWith('.xlsx')) {
+		iconPathAndFileName = 'images/general/iconExcel.png';
+	} else if (fileName.endsWith('.json')) {
+		iconPathAndFileName = 'images/general/iconJson.png';
+	} else if (fileName.endsWith('.txt')) {
+		iconPathAndFileName = 'images/general/iconText.png';
+	} else {
+		iconPathAndFileName = `images/${fileName}`
+	}
+
 	db.data.fileItems.push({
 		title: req.body.title,
 		description: req.body.description,
 		notes: req.body.notes,
-		fileName: req.body.fileName
+		fileName: req.body.fileName,
+		iconPathAndFileName
 	});
 	await db.write();
 	res.json({});
