@@ -1,3 +1,53 @@
 {
-  "fileItems": []
+  "fileItems": [
+    {
+      "title": "ex",
+      "description": "",
+      "notes": "",
+      "fileName": "scores.xlsx",
+      "iconPathAndFileName": "uploadedFiles/general/iconExcel.png"
+    },
+    {
+      "title": "asdf",
+      "description": "dfdf",
+      "notes": "",
+      "fileName": "lake.jpg",
+      "iconPathAndFileName": "uploadedFiles/lake.jpg"
+    },
+    {
+      "title": "",
+      "description": "",
+      "notes": "",
+      "fileName": "undefined",
+      "iconPathAndFileName": "uploadedFiles/undefined"
+    },
+    {
+      "title": "",
+      "description": "",
+      "notes": "",
+      "fileName": "undefined",
+      "iconPathAndFileName": "uploadedFiles/undefined"
+    },
+    {
+      "title": "",
+      "description": "",
+      "notes": "",
+      "fileName": "undefined",
+      "iconPathAndFileName": "uploadedFiles/undefined"
+    },
+    {
+      "title": "",
+      "description": "",
+      "notes": "",
+      "fileName": "undefined",
+      "iconPathAndFileName": "uploadedFiles/undefined"
+    },
+    {
+      "title": "",
+      "description": "",
+      "notes": "",
+      "fileName": "undefined",
+      "iconPathAndFileName": "uploadedFiles/undefined"
+    }
+  ]
 }
