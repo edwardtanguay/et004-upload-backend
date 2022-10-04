@@ -20,6 +20,13 @@
       "notes": "",
       "fileName": "screenshot.jpg",
       "iconPathAndFileName": "uploadedFiles/screenshot.jpg"
+    },
+    {
+      "title": "sdfsdfsdf",
+      "description": "",
+      "notes": "",
+      "fileName": "test.txt",
+      "iconPathAndFileName": "uploadedFiles/general/iconText.png"
     }
   ]
 }
