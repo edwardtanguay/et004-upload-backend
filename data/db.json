@@ -1,10 +1,22 @@
 {
-	"fileItems": [
-		{
-			"title": "ttt",
-			"description": "ddd",
-			"notes": "nnn",
-			"fileName": "test.jpg"
-		}
-	]
+  "fileItems": [
+    {
+      "title": "ttt",
+      "description": "ddd",
+      "notes": "nnn",
+      "fileName": "test.jpg"
+    },
+    {
+      "title": "The screenshot",
+      "description": "Taken yesterday.",
+      "notes": "Needs to be fixed.",
+      "fileName": "screenshot.jpg"
+    },
+    {
+      "title": "First Report",
+      "description": "This is the report that will be sent.",
+      "notes": "Needs grammar correction.",
+      "fileName": "scores.xlsx"
+    }
+  ]
 }

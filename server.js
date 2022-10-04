@@ -17,14 +17,6 @@ const port = 5889;
 const staticDirectory = path.join(__dirname, './public');
 app.use(express.static(staticDirectory));
 
-// db.data.fileItems.push({
-// 	title: 'added',
-// 	description: '333',
-// 	notes: '222',
-// 	fileName: 'added.jpg'
-// });
-// await db.write();
-
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
 		cb(null, 'public/images/');
@@ -43,7 +35,15 @@ app.get('/fileitems', async (req, res) => {
 	res.send(db.data.fileItems);
 });
 
-app.post('/uploadfile', upload.single('file'), function (req, res) {
+app.post('/uploadfile', upload.single('file'), async (req, res) => {
+	await db.read();
+	db.data.fileItems.push({
+		title: req.body.title,
+		description: req.body.description,
+		notes: req.body.notes,
+		fileName: req.body.fileName
+	});
+	await db.write();
 	res.json({});
 });
 
