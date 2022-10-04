@@ -19,7 +19,7 @@ app.use(express.static(staticDirectory));
 
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
-		cb(null, 'public/images/');
+		cb(null, 'public/uploadedFiles/');
 	},
 	filename: (req, file, cb) => {
 		cb(null, file.originalname);
@@ -40,13 +40,13 @@ app.post('/uploadfile', upload.single('file'), async (req, res) => {
 	const fileName = req.body.fileName;
 	let iconPathAndFileName = '';
 	if (fileName.endsWith('.xlsx')) {
-		iconPathAndFileName = 'images/general/iconExcel.png';
+		iconPathAndFileName = 'uploadedFiles/general/iconExcel.png';
 	} else if (fileName.endsWith('.json')) {
-		iconPathAndFileName = 'images/general/iconJson.png';
+		iconPathAndFileName = 'uploadedFiles/general/iconJson.png';
 	} else if (fileName.endsWith('.txt')) {
-		iconPathAndFileName = 'images/general/iconText.png';
+		iconPathAndFileName = 'uploadedFiles/general/iconText.png';
 	} else {
-		iconPathAndFileName = `images/${fileName}`
+		iconPathAndFileName = `uploadedFiles/${fileName}`
 	}
 
 	db.data.fileItems.push({
