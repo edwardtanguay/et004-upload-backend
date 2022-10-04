@@ -2,14 +2,16 @@
   "name": "et004-upload-backend",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
   "keywords": [],
   "type": "module",
   "author": "",
   "license": "ISC",
   "description": "",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

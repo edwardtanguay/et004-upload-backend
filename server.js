@@ -7,18 +7,18 @@ const port = 5889;
 
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
-		cb(null, 'images/')
+		cb(null, 'uploadedFiles/');
 	},
 	filename: (req, file, cb) => {
-		cb(null, file.originalname)
-	},
+		cb(null, file.originalname);
+	}
 });
 
 const upload = multer({ storage: storage });
 
 app.use(cors());
 
-app.post('/image', upload.single('file'), function (req, res) {
+app.post('/uploadfile', upload.single('file'), function (req, res) {
 	res.json({});
 });
 
