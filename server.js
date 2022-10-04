@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import multer from 'multer';
 import { join, dirname } from 'path';
+import path from 'path';
 import { fileURLToPath } from 'url';
 import { Low, JSONFile } from 'lowdb';
 
@@ -13,6 +14,9 @@ const db = new Low(adapter);
 const app = express();
 const port = 5889;
 
+const staticDirectory = path.join(__dirname, './public');
+app.use(express.static(staticDirectory));
+
 // db.data.fileItems.push({
 // 	title: 'added',
 // 	description: '333',
@@ -23,7 +27,7 @@ const port = 5889;
 
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
-		cb(null, 'uploadedFiles/');
+		cb(null, 'public/images/');
 	},
 	filename: (req, file, cb) => {
 		cb(null, file.originalname);
