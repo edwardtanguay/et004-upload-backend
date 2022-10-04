@@ -1,32 +1,3 @@
 {
-  "fileItems": [
-    {
-      "title": "ex",
-      "description": "",
-      "notes": "",
-      "fileName": "scores.xlsx",
-      "iconPathAndFileName": "uploadedFiles/general/iconExcel.png"
-    },
-    {
-      "title": "asdf",
-      "description": "dfdf",
-      "notes": "",
-      "fileName": "lake.jpg",
-      "iconPathAndFileName": "uploadedFiles/lake.jpg"
-    },
-    {
-      "title": "dfdfdfd",
-      "description": "",
-      "notes": "",
-      "fileName": "screenshot.jpg",
-      "iconPathAndFileName": "uploadedFiles/screenshot.jpg"
-    },
-    {
-      "title": "sdfsdfsdf",
-      "description": "",
-      "notes": "",
-      "fileName": "test.txt",
-      "iconPathAndFileName": "uploadedFiles/general/iconText.png"
-    }
-  ]
+  "fileItems": []
 }
